@@ -1,0 +1,14 @@
+C:\Users\popsm\source\repos\TPquatre\TPquatre\bin\Debug\TPquatre.exe.config
+C:\Users\popsm\source\repos\TPquatre\TPquatre\bin\Debug\TPquatre.exe
+C:\Users\popsm\source\repos\TPquatre\TPquatre\bin\Debug\TPquatre.pdb
+C:\Users\popsm\source\repos\TPquatre\TPquatre\obj\Debug\MainWindow.g.cs
+C:\Users\popsm\source\repos\TPquatre\TPquatre\obj\Debug\App.g.cs
+C:\Users\popsm\source\repos\TPquatre\TPquatre\obj\Debug\TPquatre_MarkupCompile.cache
+C:\Users\popsm\source\repos\TPquatre\TPquatre\obj\Debug\TPquatre_MarkupCompile.lref
+C:\Users\popsm\source\repos\TPquatre\TPquatre\obj\Debug\MainWindow.baml
+C:\Users\popsm\source\repos\TPquatre\TPquatre\obj\Debug\TPquatre.g.resources
+C:\Users\popsm\source\repos\TPquatre\TPquatre\obj\Debug\TPquatre.Properties.Resources.resources
+C:\Users\popsm\source\repos\TPquatre\TPquatre\obj\Debug\TPquatre.csproj.GenerateResource.cache
+C:\Users\popsm\source\repos\TPquatre\TPquatre\obj\Debug\TPquatre.exe
+C:\Users\popsm\source\repos\TPquatre\TPquatre\obj\Debug\TPquatre.pdb
+C:\Users\popsm\source\repos\TPquatre\TPquatre\obj\Debug\TPquatre.csprojAssemblyReference.cache
