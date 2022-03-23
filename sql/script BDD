@@ -1,0 +1,117 @@
+
+
+-- a mettre avant le reste, puis inserer le reste en etant dans la nouvelle database
+
+DROP DATABASE IF EXISTS marieteam;
+CREATE DATABASE marieteam;
+--
+
+
+
+CREATE TABLE `bateau` (
+  `id` int(50) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+CREATE TABLE `contenir` (
+  `lettre` varchar(50) NOT NULL,
+  `id` int(50) NOT NULL AUTO_INCREMENT,
+  `capaciteMax` int(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `contenir_bateau0_FK` (`id`)
+  );
+
+
+
+CREATE TABLE `enregistrer` (
+  `num` int(50) NOT NULL AUTO_INCREMENT,
+  `num_reservation` int(50) NOT NULL,
+  `quantite` int(50) NOT NULL,
+  PRIMARY KEY (`num`),
+  KEY `enregistrer_reservation0_FK` (`num_reservation`)
+);
+
+
+CREATE TABLE `liaison` (
+  `code` int(50) NOT NULL AUTO_INCREMENT,
+  `distance` float NOT NULL,
+  `id_secteur` int(50) NOT NULL,
+  `id_port` int(50) NOT NULL,
+  `id_port_depart` int(50) NOT NULL,
+  PRIMARY KEY (`code`),
+  KEY `liaison_secteur_FK` (`id_secteur`),
+  KEY `liaison_port0_FK` (`id_port`),
+  KEY `liaison_port1_FK` (`id_port_depart`)
+);
+
+
+CREATE TABLE `periode` (
+    id_periode int(50) NOT NULL AUTO_INCREMENT,
+  `dateDeb` date NOT NULL,
+  `dateFin` date NOT NULL,
+  PRIMARY KEY (`id_periode`)
+);
+
+
+CREATE TABLE `port` (
+  `id` int(50) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+CREATE TABLE `reservation` (
+  `num` int(50) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(50) NOT NULL,
+  `adr` varchar(50) NOT NULL,
+  `cp` varchar(50) NOT NULL,
+  `ville` varchar(50) NOT NULL,
+  `num_traversee` int(50) NOT NULL,
+  PRIMARY KEY (`num`),
+  KEY `reservation_traversee_FK` (`num_traversee`)
+);
+
+
+CREATE TABLE `secteur` (
+  `id` int(50) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+CREATE TABLE `tarifer` (
+  `num` int(50) NOT NULL AUTO_INCREMENT,
+  `dateDeb` date NOT NULL,
+  `code` int(50) NOT NULL,
+  `tarif` int(50) NOT NULL,
+  PRIMARY KEY (`num`),
+  KEY `tarifer_periode0_FK` (`dateDeb`),
+  KEY `tarifer_liaison1_FK` (`code`)
+);
+
+
+
+CREATE TABLE `traversee` (
+  `num` int(50) NOT NULL AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `heure` varchar(50) NOT NULL,
+  `id` int(50) NOT NULL,
+  `code` int(50) NOT NULL,
+  PRIMARY KEY (`num`),
+  KEY `traversee_bateau_FK` (`id`),
+  KEY `traversee_liaison0_FK` (`code`)
+);
+
+
+
+CREATE TABLE `type` (
+  `num` int(50) NOT NULL AUTO_INCREMENT,
+  `libelle` varchar(50) NOT NULL,
+  `lettre` varchar(50) NOT NULL,
+  PRIMARY KEY (`num`),
+  KEY `type_categorie_FK` (`lettre`)
+);
+
+ALTER TABLE liaison ADD CONSTRAINT id_secteur FOREIGN KEY (id_secteur) REFERENCES secteur(id);

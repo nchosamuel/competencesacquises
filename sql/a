@@ -1,0 +1,31 @@
+CREATE TABLE escale (
+id int,
+code int,
+numeroordre int(50) NOT NULL,
+FOREIGN KEY (code) REFERENCES liaison(code),
+FOREIGN KEY (id) REFERENCES port(id));
+
+
+-----
+
+
+TRUNCATE TABLE secteur;
+TRUNCATE TABLE liaison;
+TRUNCATE TABLE port;
+TRUNCATE TABLE escale;
+
+INSERT INTO secteur (nom)
+VALUES ('bahamas');
+
+INSERT INTO escale (code, id, numeroordre)
+VALUES (1,2,1),
+	(1,3,2);
+
+INSERT INTO port(nom)
+VALUES ('grand_bahamas'),
+	('andros'),
+	('long'),
+	('turks_and_caicos_islands');
+
+INSERT INTO liaison(distance,id_port,id_port_depart,id_secteur)
+VALUES(8,4,1,1);

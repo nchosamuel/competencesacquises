@@ -1,0 +1,4 @@
+"com";"communication et relations clients"
+"compta";"Comptabilité , gestion et audit"
+"info";" informatique de communication et gestion"
+"marketing";"étude de marché et mercatique"

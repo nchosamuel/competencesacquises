@@ -1,0 +1,6 @@
+"P001";"Developpement informatique";5000;30;"Lille"
+"p002";"configuations et patrimoine";10000;45;"Paris"
+"p003";"reseaux et infrastructure";3500;15;"Arras"
+"p004";"Support et formation";15000;88;"Lille"
+"p005";"Téléphonie VOIP";12000;30;"Amiens"
+"p006";"Serveurs et cloud";20000;25;"Lille"
