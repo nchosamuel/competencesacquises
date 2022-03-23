@@ -1,0 +1,117 @@
+Main 
+
+
+
+public class NewMain {
+
+    public static void main(String[] args) {
+        
+        Bateau bat1 = new Bateau("001" , "Lucie isle", 37.20 , 8.60);
+        bat1.retourner();
+        BateauVoyageur bat2 = new Bateau("002",);
+    }
+    
+}
+
+
+
+Bateau
+
+
+
+
+import java.util.*;
+public class Bateau {
+
+    private double longueurBat , largeurBat;
+    private String nomBat , idBat;
+    
+    public Bateau(){
+    }
+    
+    public Bateau(String UnId ,String nomBat,double longueurBat ,double largeurBat){
+        this.idBat=idBat;
+        this.nomBat=nomBat;
+        this.longueurBat=longueurBat;
+        this.largeurBat=largeurBat;
+    }
+    public double getlongueurBat(){
+        return longueurBat;
+    }
+    public void setlongueurBat(){
+        this.longueurBat=longueurBat;
+    }
+    public double getlargeurBat(){
+        return largeurBat;
+    }
+    public void setlargeurBat(){
+        this.largeurBat=largeurBat;
+    }
+    public String getnomBat(){
+        return nomBat;
+    }
+    public void setnomBat(){
+        this.nomBat=nomBat;
+    }
+    public String getidBat(){
+        return idBat;
+    }
+    public void setidBat(){
+        this.idBat=idBat;
+    }
+    public void retourner(){
+        System.out.println("Nom du bateau :" + nomBat);
+        System.out.println("Longueur :" + longueurBat+ "mètres");
+        System.out.println("Largeur :" + largeurBat+ "mètres");        
+    }
+}
+
+
+
+BatVoy
+
+
+
+public class BateauVoyageur {
+    
+    private double vitesseBatVoy ,uneLongueur,uneLargeur;
+    private String unId ,imageBatVoy , unNom;
+    
+    public BateauVoyageur (String unId,String unNom,double uneLongueur,double uneLargeur,double vitesseBatVoy,String imageBatVoy) {
+        this.unId=unId;
+        this.unNom=unNom;
+        this.uneLongueur=uneLongueur;
+        this.uneLargeur=uneLargeur;
+        this.vitesseBatVoy=vitesseBatVoy;
+        this.imageBatVoy=imageBatVoy;
+    }
+    public void retourner(){
+        System.out.println("Nom du bateau :");
+        System.out.println("Longueur : " + uneLongueur + "mètres");
+        System.out.println("Largeur : " + uneLargeur + "mètres");
+        System.out.println("Vitesse : " + vitesseBatVoy + "noeuds");
+    }   
+}
+
+
+
+BatFret
+
+
+
+public class BateauFret {
+    private int poidsmaxBatFret;
+}
+
+
+
+
+public class Equipement {
+    private String idEquip,libEquip;
+    
+    public Equipement(String unId ,String unLib){
+        this.idEquip=idEquip;
+        this.libEquip=libEquip;
+    }
+    
+}
